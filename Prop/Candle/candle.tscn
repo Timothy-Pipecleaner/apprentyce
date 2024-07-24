@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dytpcar260vos"]
+
+[ext_resource type="Script" path="res://Prop/Candle/candle_prop.gd" id="1_a6p8a"]
+[ext_resource type="Texture2D" uid="uid://b3lyihkr6hmxf" path="res://Prop/Candle/Brazier.png" id="2_urd2t"]
+[ext_resource type="Script" path="res://Prop/interactable.gd" id="3_jpuyb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_37six"]
+radius = 35.0
+height = 134.0
+
+[node name="Candle" type="StaticBody2D"]
+script = ExtResource("1_a6p8a")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -69)
+texture = ExtResource("2_urd2t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_37six")
+
+[node name="Interactable" type="Area2D" parent="."]
+script = ExtResource("3_jpuyb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_37six")
+debug_color = Color(1, 0.827258, 0, 0.42)

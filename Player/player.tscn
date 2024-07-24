@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://buq0eodcnr30e"]
+
+[ext_resource type="Script" path="res://Player/player_controller.gd" id="1_w4x0i"]
+[ext_resource type="Texture2D" uid="uid://d05mr5ff0rwnx" path="res://Player/Player_Idle.png" id="2_dkwal"]
+[ext_resource type="Script" path="res://Player/interactor.gd" id="3_cqhaa"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0gfqj"]
+radius = 30.0
+height = 106.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v7ue0"]
+size = Vector2(128, 128)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_w4x0i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -61)
+texture = ExtResource("2_dkwal")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_0gfqj")
+
+[node name="Interactor" type="Area2D" parent="."]
+script = ExtResource("3_cqhaa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactor"]
+position = Vector2(0, 103)
+shape = SubResource("RectangleShape2D_v7ue0")
+debug_color = Color(0.800781, 0.798069, 0, 0.42)
