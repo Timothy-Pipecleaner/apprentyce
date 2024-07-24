@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccs3q12ovc3xe"
-path="res://.godot/imported/Brazier.png-790faf80ce92b7d9307ca12b5b95e73f.ctex"
+uid="uid://cg6rtjx4uys2o"
+path="res://.godot/imported/Wall_Tiles.png-bd074e56c783141710ee48ab09bea33a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Prop/Candle/Brazier.png"
-dest_files=["res://.godot/imported/Brazier.png-790faf80ce92b7d9307ca12b5b95e73f.ctex"]
+source_file="res://Tileset/Wall_Tiles.png"
+dest_files=["res://.godot/imported/Wall_Tiles.png-bd074e56c783141710ee48ab09bea33a.ctex"]
 
 [params]
 
