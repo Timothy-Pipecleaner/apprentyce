@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://clb0vhxsije1x"]
+
+[ext_resource type="Script" path="res://Prop/Goal/goal_prop.gd" id="1_bn6n5"]
+[ext_resource type="Texture2D" uid="uid://dwaehjyidmxw1" path="res://icon.svg" id="1_r4bvm"]
+
+[node name="GoalProp" type="Node2D"]
+script = ExtResource("1_bn6n5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_r4bvm")
