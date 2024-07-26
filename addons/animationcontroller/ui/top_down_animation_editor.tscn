@@ -1,0 +1,63 @@
+[gd_scene load_steps=2 format=3 uid="uid://yq8k7x8xwfk7"]
+
+[ext_resource type="Script" path="res://addons/animationcontroller/ui/top_down_animation_editor.gd" id="1_52w0i"]
+
+[node name="MarginContainer" type="MarginContainer" node_paths=PackedStringArray("left_anim_button", "right_anim_button", "up_anim_button", "down_anim_button", "name_edit")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_bottom = 10
+script = ExtResource("1_52w0i")
+left_anim_button = NodePath("GridContainer/OptionButton")
+right_anim_button = NodePath("GridContainer/OptionButton2")
+up_anim_button = NodePath("GridContainer/OptionButton3")
+down_anim_button = NodePath("GridContainer/OptionButton4")
+name_edit = NodePath("GridContainer/LineEdit")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 2
+columns = 2
+
+[node name="Label5" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "Name"
+
+[node name="LineEdit" type="LineEdit" parent="GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "Left"
+text_overrun_behavior = 1
+
+[node name="OptionButton" type="OptionButton" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "Right"
+text_overrun_behavior = 1
+
+[node name="OptionButton2" type="OptionButton" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label3" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "Up"
+text_overrun_behavior = 1
+
+[node name="OptionButton3" type="OptionButton" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label4" type="Label" parent="GridContainer"]
+layout_mode = 2
+text = "Down"
+
+[node name="OptionButton4" type="OptionButton" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
