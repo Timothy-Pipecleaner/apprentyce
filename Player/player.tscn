@@ -1,8 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://buq0eodcnr30e"]
+[gd_scene load_steps=15 format=3 uid="uid://buq0eodcnr30e"]
 
 [ext_resource type="Script" path="res://Player/player_controller.gd" id="1_w4x0i"]
 [ext_resource type="Texture2D" uid="uid://d05mr5ff0rwnx" path="res://Player/Player_Idle.png" id="2_dkwal"]
 [ext_resource type="Script" path="res://Player/interactor.gd" id="3_cqhaa"]
+[ext_resource type="Script" path="res://addons/animationcontroller/animation_controller/animation_controller.gd" id="4_uvpup"]
+[ext_resource type="Script" path="res://addons/animationcontroller/animation_controller/top_down_animation.gd" id="5_wf2o6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0gfqj"]
 radius = 30.0
@@ -37,6 +39,30 @@ tracks/1/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Interactor/CollisionShape2D:shape:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(90, 128)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Interactor/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 103)]
+}
 
 [sub_resource type="Animation" id="Animation_6q48i"]
 resource_name = "Idle_Left"
@@ -59,10 +85,34 @@ tracks/1/path = NodePath("Sprite2D:flip_h")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.3),
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Interactor/CollisionShape2D:shape:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(128, 65)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Interactor/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-117, 8)]
 }
 
 [sub_resource type="Animation" id="Animation_j8ruq"]
@@ -91,6 +141,30 @@ tracks/1/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Interactor/CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_v7ue0")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Interactor/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(118, 8)]
+}
 
 [sub_resource type="Animation" id="Animation_ura0h"]
 resource_name = "Idle_Up"
@@ -118,6 +192,30 @@ tracks/1/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Interactor/CollisionShape2D:shape:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(90, 128)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Interactor/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -88)]
+}
 
 [sub_resource type="Animation" id="Animation_xr3gw"]
 length = 0.001
@@ -133,6 +231,42 @@ tracks/0/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Interactor/CollisionShape2D:shape:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(90, 128)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Interactor/CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 103)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Interactor/CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_v7ue0")]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c46b7"]
 _data = {
@@ -143,9 +277,18 @@ _data = {
 "RESET": SubResource("Animation_xr3gw")
 }
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("interactor")]
+[sub_resource type="Resource" id="Resource_uepdr"]
+script = ExtResource("5_wf2o6")
+name = "Idle"
+left_animation = "Idle_Left"
+right_animation = "Idle_Right"
+up_animation = "Idle_Up"
+down_animation = "Idle_Down"
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("interactor", "animation_controller")]
 script = ExtResource("1_w4x0i")
 interactor = NodePath("Interactor")
+animation_controller = NodePath("AnimationController")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -61)
@@ -169,3 +312,8 @@ debug_color = Color(0.800781, 0.798069, 0, 0.42)
 libraries = {
 "": SubResource("AnimationLibrary_c46b7")
 }
+
+[node name="AnimationController" type="Node" parent="." node_paths=PackedStringArray("animation_player")]
+script = ExtResource("4_uvpup")
+animation_list = Array[ExtResource("5_wf2o6")]([SubResource("Resource_uepdr")])
+animation_player = NodePath("../AnimationPlayer")
