@@ -1,30 +1,37 @@
-[gd_scene load_steps=5 format=3 uid="uid://dytpcar260vos"]
+[gd_scene load_steps=6 format=3 uid="uid://dytpcar260vos"]
 
 [ext_resource type="Script" path="res://Prop/Candle/candle_prop.gd" id="1_a6p8a"]
-[ext_resource type="Texture2D" uid="uid://ccs3q12ovc3xe" path="res://Prop/Candle/Brazier.png" id="2_urd2t"]
 [ext_resource type="Script" path="res://Prop/interactable.gd" id="3_jpuyb"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_37six"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pn620"]
+load_path = "res://.godot/imported/Brazier.png-790faf80ce92b7d9307ca12b5b95e73f.ctex"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0fwt1"]
 radius = 35.0
 height = 134.0
 
-[node name="Candle" type="StaticBody2D" node_paths=PackedStringArray("sprite")]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ams3f"]
+radius = 35.0
+height = 108.0
+
+[node name="Candle" type="StaticBody2D" node_paths=PackedStringArray("sprite", "interactable")]
 script = ExtResource("1_a6p8a")
 sprite = NodePath("Sprite2D")
+interactable = NodePath("Interactable")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -69)
-texture = ExtResource("2_urd2t")
+texture = SubResource("CompressedTexture2D_pn620")
 hframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_37six")
+shape = SubResource("CapsuleShape2D_0fwt1")
 
 [node name="Interactable" type="Area2D" parent="."]
 script = ExtResource("3_jpuyb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_37six")
+shape = SubResource("CapsuleShape2D_ams3f")
 debug_color = Color(1, 0.827258, 0, 0.42)

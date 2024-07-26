@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dytpcar260vos" path="res://Prop/Candle/candle.tscn" id="3_punc0"]
 [ext_resource type="Script" path="res://Level/game_controller.gd" id="4_bcw5k"]
 [ext_resource type="PackedScene" uid="uid://buq0eodcnr30e" path="res://Player/player.tscn" id="5_4gtyb"]
-[ext_resource type="Texture2D" uid="uid://dwaehjyidmxw1" path="res://icon.svg" id="6_7btxr"]
+[ext_resource type="PackedScene" uid="uid://clb0vhxsije1x" path="res://Prop/Goal/goal_prop.tscn" id="6_po11c"]
 
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
@@ -20,14 +20,16 @@ layer_0/tile_data = PackedInt32Array(458756, 196611, 4, 458757, 196611, 4, 45875
 position = Vector2(1920, 1664)
 
 [node name="Candle" parent="." instance=ExtResource("3_punc0")]
-position = Vector2(1920, 896)
-starts_lit = true
+position = Vector2(1664, 896)
+lit = true
 
 [node name="GameController" type="Node2D" parent="." node_paths=PackedStringArray("tile_map")]
 script = ExtResource("4_bcw5k")
 player_scene = ExtResource("5_4gtyb")
 tile_map = NodePath("../TileMap")
 
-[node name="Icon" type="Sprite2D" parent="."]
+[node name="GoalProp" parent="." instance=ExtResource("6_po11c")]
 position = Vector2(1920, 384)
-texture = ExtResource("6_7btxr")
+
+[node name="Candle2" parent="." instance=ExtResource("3_punc0")]
+position = Vector2(2176, 896)

@@ -2,7 +2,7 @@
 extends GridProp
 class_name SpawnProp
 
-var tool_texture : Texture2D = preload("res://Player/Player_Idle.png")
+var tool_texture : Texture2D = preload("res://Prop/Spawn/player_tool.tres")
 
 func get_prop_type():
 	return PropType.SPAWN_POINT
