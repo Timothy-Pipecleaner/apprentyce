@@ -7,7 +7,7 @@ signal interacted()
 signal highlighted(highlight: bool)
 
 func interact() -> void:
-	if active: return
+	if !active: return
 	interacted.emit()
 
 func highlight(has_highlight: bool) -> void:
